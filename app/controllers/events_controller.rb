@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 require 'icalendar'
+=======
+>>>>>>> 0569218e708c0d575820828060e68bfc53681a7c
 class EventsController < ApplicationController
   def index
     @events = Event.find :all, :order => 'created_at ASC'
@@ -15,6 +18,7 @@ class EventsController < ApplicationController
   
   def delete
   end
+<<<<<<< HEAD
   
   def ical
     events = Event.find :all
@@ -34,4 +38,6 @@ class EventsController < ApplicationController
     headers['Content-Type'] = "text/calendar; charset=UTF-8"
     render :text => calendar.to_ical
   end
+=======
+>>>>>>> 0569218e708c0d575820828060e68bfc53681a7c
 end

@@ -30,7 +30,10 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
+<<<<<<< HEAD
   map.connect 'events/ical', :controller => 'events', :action => 'ical'
+=======
+>>>>>>> 0569218e708c0d575820828060e68bfc53681a7c
   map.resources :events
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
