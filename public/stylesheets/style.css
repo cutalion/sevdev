@@ -1,0 +1,18 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+body {
+    padding: 5px 5px 5px 5px;
+}
+
+.event_block {
+    margin: 0px 10px 10px 10px;
+}
