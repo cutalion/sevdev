@@ -1,6 +1,6 @@
 %h1 
   Список событий
-  =link_to image_tag("ical.gif"), :action => "ical"
+  = link_to image_tag("ical.gif"), events_url(:ical)
 - if @events.empty? 
   %p К сожалению, в ближайшее время событий не предвидится.
 - else    
