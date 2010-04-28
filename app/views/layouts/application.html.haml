@@ -3,6 +3,7 @@
   %head
     %title= 'Sevastopol Ruby on Rails developers'
     = javascript_include_tag :defaults
+    = stylesheet_link_tag "style"
     = yield :head
   %body{ :class => controller.controller_path.gsub('/', ' ') + ' ' + params[:action] }
     #page
