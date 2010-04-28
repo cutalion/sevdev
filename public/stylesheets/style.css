@@ -1,18 +1,14 @@
 *, html {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia;
-}
-
-h1 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
+  margin: 0;
+  padding: 0;
+  font-family: Georgia; }
 
 body {
-    padding: 5px 5px 5px 5px;
-}
+  padding: 5px 5px 5px 5px; }
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px; }
 
 .event_block {
-    margin: 0px 10px 10px 10px;
-}
+  margin: 0px 10px 10px 10px; }
