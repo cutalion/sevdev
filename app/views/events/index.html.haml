@@ -1,0 +1,10 @@
+%h1 Список событий
+- if @events.empty? 
+  %p К сожалению в ближайшее время событий не предвидится.
+- else    
+  - @events.each do |event| 
+    .event_block
+      .started_at= event.started_at.to_formatted_s(:dmY_HM)
+      .linked_name= link_to event.name, event_path(event)
+      .place= "@: " + event.place
+      .vk_event= vkontakte_event_url event.vkontakte_event_id
