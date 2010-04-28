@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 %h1 
   Список событий
   =link_to image_tag("ical.gif"), :action => "ical"
 - if @events.empty? 
   %p К сожалению, в ближайшее время событий не предвидится.
-=======
-%h1 Список событий
-- if @events.empty? 
-  %p К сожалению в ближайшее время событий не предвидится.
->>>>>>> 0569218e708c0d575820828060e68bfc53681a7c
 - else    
   - @events.each do |event| 
     .event_block
