@@ -1,6 +1,8 @@
-%h1 Список событий
+%h1 
+  Список событий
+  =link_to image_tag("ical.gif"), :action => "ical"
 - if @events.empty? 
-  %p К сожалению в ближайшее время событий не предвидится.
+  %p К сожалению, в ближайшее время событий не предвидится.
 - else    
   - @events.each do |event| 
     .event_block
