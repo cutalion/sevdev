@@ -1,10 +1,10 @@
-require 'icalendar'
 class EventsController < ApplicationController
   def index
-    @events = Event.find :all, :order => 'created_at ASC'
+    @events = Event.find :all, :order => 'started_at ASC'
   end
   
   def show
+    @event = Event.find(params[:id])
   end
   
   def create

@@ -1,1 +1,1 @@
-Time::DATE_FORMATS[:dmY_HM] = "%d.%m.%Y %H:%M"
+Time::DATE_FORMATS[:event] = "%d.%m.%Y %H:%M"
