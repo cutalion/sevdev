@@ -1,6 +1,7 @@
 %h1 Register
 
-- form_for @user, :url => account_path do |f|
-  = f.error_messages
-  = render :partial => "form", :object => f
-  = f.submit "Register"
+- semantic_form_for @user, :url => account_path do |f|
+  = f.semantic_errors
+  = f.inputs :login, :email, :password, :password_confirmation
+  - f.buttons do
+    = f.commit_button :button_html => { :value => "Register" }

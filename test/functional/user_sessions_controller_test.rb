@@ -22,7 +22,7 @@ class UserSessionsControllerTest < ActionController::TestCase
 
       should "log in user" do
         post :create, :user_session => {:login => @user.login, :password => 'password'}
-        assert_equal "Login successful!", flash[:notice]
+        assert_redirected_to account_url
       end
 
       should "not log in without correct login/password" do

@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "icalendar"
   config.gem "authlogic"
+  config.gem "formtastic"
  
 
   # Only load the plugins named here, in the order given (default is alphabetical).
