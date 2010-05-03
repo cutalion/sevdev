@@ -4,11 +4,27 @@
   font-family: Georgia
 
 body
-  padding: 5px 5px 5px 5px
+  width: 800px
+  margin: 5px auto
+  font-size: 14px
+
+ul.menu
+  width: 100%
+  overflow: hidden
+  list-style: none
+  margin: 0 -10px 0 0
+  padding: 0
+
+  li
+    float: left
+    margin-right: 10px
+
+    a
+      display: block
 
 h1
   font-size: 1.5em
   margin-bottom: 10px
 
-.event_block
-  margin: 0px 10px 10px 10px
+@import structure.sass
+@import events.sass

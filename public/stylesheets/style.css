@@ -4,11 +4,36 @@
   font-family: Georgia; }
 
 body {
-  padding: 5px 5px 5px 5px; }
+  width: 800px;
+  margin: 5px auto;
+  font-size: 14px; }
+
+ul.menu {
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 -10px 0 0;
+  padding: 0; }
+  ul.menu li {
+    float: left;
+    margin-right: 10px; }
+    ul.menu li a {
+      display: block; }
 
 h1 {
   font-size: 1.5em;
   margin-bottom: 10px; }
+
+#header {
+  width: 100%;
+  overflow: hidden; }
+  #header .logo {
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold; }
+  #header .menu {
+    width: 200px;
+    float: right; }
 
 .event_block {
   margin: 0px 10px 10px 10px; }
