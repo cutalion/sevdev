@@ -3,4 +3,8 @@ nbproject
 tmp/*
 log/*
 .idea
+public/stylesheets/style.css
+public/images/.DS_Store
 
+public/stylesheets/events.css
+public/stylesheets/structure.css

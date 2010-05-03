@@ -1,0 +1,8 @@
+%h1=@event.name
+
+.event_block
+  .started_at
+    %span= @event.started_at.to_formatted_s(:event)
+  .description
+    =@event.description
+  %br

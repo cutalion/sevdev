@@ -3,8 +3,8 @@ class Event < ActiveRecord::Base
 
   def to_ical
     ievent = Icalendar::Event.new
-    ievent.start = started_at.strftime("%Y%m%dT%H%M")
-    ievent.end = started_at.strftime("%Y%m%dT%H%M")
+    ievent.start = started_at.strftime("%Y%m%dT%H%M%S")
+    ievent.end = started_at.strftime("%Y%m%dT%H%M%S")
     ievent.summary = name
     ievent.description = description
     ievent.location = place
