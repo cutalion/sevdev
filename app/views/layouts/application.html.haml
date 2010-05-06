@@ -7,7 +7,7 @@
     = yield :head
   %body{ :class => controller.controller_path.gsub('/', ' ') + ' ' + params[:action] }
     #header
-      .logo I do webdev ;)
+      .logo=link_to 'I do webdev ;)'
       %ul.menu
         %li= link_to 'Home', root_path
         %li= link_to "My Profile", account_path if current_user
@@ -15,7 +15,9 @@
         %li= link_to 'Login', new_user_session_path unless current_user
         %li= link_to 'Register', new_user_path unless current_user
     %ul#main_menu.menu
-      %li= link_to 'Events', events_path
+      %li= link_to 'События', events_path
+      %li= link_to 'Вакансии'
+      %li= link_to 'Разговоры'
     #content
       = show_flash
       = yield
