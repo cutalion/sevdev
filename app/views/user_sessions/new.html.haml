@@ -1,9 +1,9 @@
-%h1 Login
+%h1=t '.login'
 
 - semantic_form_for @user_session, :url => user_session_path do |f|
   - f.inputs do
-    = f.input :login
-    = f.input :password
-    = f.input :remember_me, :as => :boolean, :required => false
+    = f.input :login, :label => t('.username')
+    = f.input :password, :label => t('.password')
+    = f.input :remember_me, :as => :boolean, :required => false, :label => t('.remember_me')
   - f.buttons do
-    = f.commit_button :button_html => { :value => "Login" }
+    = f.commit_button :button_html => { :value => t('.login')}

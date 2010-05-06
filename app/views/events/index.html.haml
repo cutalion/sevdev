@@ -1,9 +1,9 @@
 %h1 
-  Список событий
-  = link_to image_tag("ical.png"), events_url(:ics)
+  =t '.event_list'
+  =link_to image_tag("ical.png"), events_url(:ics)
 
 - if @events.empty? 
-  %p К сожалению, в ближайшее время событий не предвидится.
+  %p=t '.no_events'
 - else    
   - @events.each do |event| 
     .event_block

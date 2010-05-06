@@ -9,15 +9,15 @@
     #header
       .logo=link_to 'I do webdev ;)'
       %ul.menu
-        %li= link_to 'Home', root_path
-        %li= link_to "My Profile", account_path if current_user
-        %li= link_to 'Logout', user_session_path, :method => :delete if current_user
-        %li= link_to 'Login', new_user_session_path unless current_user
-        %li= link_to 'Register', new_user_path unless current_user
+        %li= link_to t('.home'), root_path
+        %li= link_to t('.my_profile'), account_path if current_user
+        %li= link_to t('.logout'), user_session_path, :method => :delete if current_user
+        %li= link_to t('.login'), new_user_session_path unless current_user
+        %li= link_to t('.register'), new_user_path unless current_user
     %ul#main_menu.menu
-      %li= link_to 'События', events_path
-      %li= link_to 'Вакансии'
-      %li= link_to 'Разговоры'
+      %li=link_to t ('.events'), events_path
+      %li=link_to t '.jobs'
+      %li=link_to t '.talks'
     #content
       = show_flash
       = yield

@@ -1,0 +1,29 @@
+ru:
+  layouts:
+    application:
+      events:     События
+      jobs:       Вакансии
+      talks:      Разговоры
+      home:       На главную
+      my_profile: Мой профиль
+      login:      Вход
+      logout:     Выход
+      register:   Регистрация
+  events:
+    index:
+      event_list: Список событий
+      no_events:  К сожалению, в ближайшее время событий не предвидится.
+  users:
+    new:
+      register:   Регистрация
+      login:      Логин
+      email:      E-mail
+      password:   Пароль
+      password_confirmation: Подтверждение пароля
+      registrate: Зарегистрировать
+  user_sessions:
+    new:
+      login:      Вход
+      username:   Логин
+      password:   Пароль
+      remember_me: запомнить
