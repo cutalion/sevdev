@@ -18,7 +18,7 @@
         %img{:src=>"images/vkontakte.gif"}
         →
         = vkontakte_event_url event.vkontakte_event_id
-      .retweet= link_to image_tag("retweet-over.png"), URI.escape(['http://twitter.com/home?status=' + event.started_at.to_s(:event), event.name, url_for(:action => 'show', :id => event.id, :only_path => false)].join(' '))
+      .retweet= link_to image_tag("retweet-over.png"), URI.escape(['http://twitter.com/home?status=' + event.started_at.to_s(:event), event.name, bitly_shorten(url_for(:action => 'show', :id => event.id, :only_path => false))].join(' '))
     .twitter
       %script{:src => "http://widgets.twimg.com/j/2/widget.js"}
       %script{:src => "/javascripts/twitter.js"}

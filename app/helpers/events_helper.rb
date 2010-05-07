@@ -11,4 +11,13 @@ module EventsHelper
     
     return calendar.to_ical
   end
+  
+  def bitly_shorten(url)
+    config = YAML.load_file(RAILS_ROOT + '/config/bitly_api_key.yml')[RAILS_ENV]
+    
+    bitly = Bitly.new(config['login'], config['api_key'])
+    page_url = bitly.shorten(url)
+    
+    return page_url.shorten
+  end
 end
