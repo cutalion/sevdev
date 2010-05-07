@@ -1,7 +1,7 @@
 new TWTR.Widget({
     version: 2,
     type: 'search',
-    search: '#ror',
+    search: '#idowebdev',
     interval: 6000,
     title: 'Прямая трансляция',
     subject: '#idowebdev',

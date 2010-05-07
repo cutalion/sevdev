@@ -6,3 +6,7 @@
   .description
     =@event.description
   %br
+  = GMap.header
+  = @map.to_html
+  = @map.div(:width => 390, :height => 300)
+  %br
