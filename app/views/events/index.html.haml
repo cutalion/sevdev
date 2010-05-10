@@ -10,15 +10,17 @@
       .started_at
         %span= event.started_at.to_formatted_s(:event)
       .linked_name= link_to event.name, event_path(event)
-      .place
-        %img{:src=>"images/tiny_pin.png"}
-        →
-        = event.place
-      .vk_event
-        %img{:src=>"images/vkontakte.gif"}
-        →
-        = vkontakte_event_url event.vkontakte_event_id
-      .retweet= link_to image_tag("retweet-over.png"), URI.escape(['http://twitter.com/home?status=' + event.started_at.to_s(:event), event.name, bitly_shorten(url_for(:action => 'show', :id => event.id, :only_path => false))].join(' '))
+      - if !event.place.nil?
+        .place
+          %img{:src=>"images/tiny_pin.png"}
+          →
+          = [event.place.name, event.place.address].join(', ')
+      - if event.vkontakte_event_id?
+        .vk_event
+          %img{:src=>"/images/vkontakte.gif"}
+          →
+          = vkontakte_event_url event.vkontakte_event_id
+      .retweet= retweet_url event
     .twitter
       %script{:src => "http://widgets.twimg.com/j/2/widget.js"}
       %script{:src => "/javascripts/twitter.js"}

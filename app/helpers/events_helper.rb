@@ -20,4 +20,8 @@ module EventsHelper
     
     return page_url.shorten
   end
+  
+  def retweet_url(event)
+    return link_to image_tag("retweet-over.png"), URI.escape(['http://twitter.com/home?status=' + event.started_at.to_s(:event), event.name, bitly_shorten(url_for(:action => 'show', :id => event.id, :only_path => false))].join(' '))
+  end
 end

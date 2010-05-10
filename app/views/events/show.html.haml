@@ -5,8 +5,15 @@
     %span= @event.started_at.to_formatted_s(:event)
   .description
     =@event.description
-  %br
-  = GMap.header
-  = @map.to_html
-  = @map.div(:width => 390, :height => 300)
-  %br
+  - if @map
+    %br
+    = GMap.header
+    = @map.to_html
+    = @map.div(:width => 390, :height => 300)
+  - if @event.vkontakte_event_id
+    %br
+    .vk_event
+      %img{:src=>"/images/vkontakte.gif"}
+      →
+      = vkontakte_event_url @event.vkontakte_event_id
+    %br

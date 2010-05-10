@@ -5,3 +5,4 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+Place.create(:name => 'FESTO', :latitude => 44.5939989, :longitude => 33.4776271, :address => 'ул. Университетская 33 (СевНТУ)')
