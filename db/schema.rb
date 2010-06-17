@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100510175832) do
+ActiveRecord::Schema.define(:version => 20100616223100) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "message"
+    t.integer  "user_id"
+    t.integer  "talk_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -26,6 +34,14 @@ ActiveRecord::Schema.define(:version => 20100510175832) do
     t.float    "longitude"
     t.float    "latitude"
     t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "talks", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

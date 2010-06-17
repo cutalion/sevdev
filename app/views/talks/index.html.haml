@@ -1,0 +1,10 @@
+%h1 
+  =t '.talk_list'
+  =link_to image_tag("add.png"), new_talk_path
+
+- if (@talks) 
+  - @talks.each do |talk|
+    .talk_block
+      .started_by 
+        %span=talk.created_at.to_formatted_s(:event) + ' / ' + talk.user.login
+      .linked_name=link_to talk.title, talk_path(talk)

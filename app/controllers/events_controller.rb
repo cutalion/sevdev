@@ -9,7 +9,7 @@ class EventsController < ApplicationController
       @map = GMap.new("map_div")
       @map.control_init(:large_map => true,:map_type => true)
       @map.center_zoom_init([@event.place.latitude, @event.place.longitude], 15)
-      @map.overlay_init(GMarker.new([44.5939989,33.4776271], :title => @event.place.name, :info_window => [@event.place.name, @event.place.address].join(', ')))
+      @map.overlay_init(GMarker.new([@event.place.latitude, @event.place.longitude], :title => @event.place.name, :info_window => [@event.place.name, @event.place.address].join(', ')))
     end
   end
   

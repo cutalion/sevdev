@@ -11,7 +11,7 @@ ru:
       register:   Регистрация
   events:
     index:
-      event_list: Список событий
+      event_list: Давайте соберемся!
       no_events:  К сожалению, в ближайшее время событий не предвидится.
   users:
     new:
@@ -27,3 +27,30 @@ ru:
       username:   Логин
       password:   Пароль
       remember_me: запомнить
+  talks:
+    index:
+      talk_list: Есть что обсудить?
+    new:
+      talk_new:  Начнем новый разговор
+      title:     Тема
+      body:      Сообщение
+      start:     начать
+    show:
+      talk:      Разговор
+  comments:
+    new:
+      comment_new: Комментируем
+      message:     Сообщение
+      add:         добавить
+  
+  talk_started: Удалось начать новый разговор!
+  comment_added: Комментарий оставлен.
+  
+  activerecord:
+     errors:
+       messages:
+         too_short: слишком кратко
+         confirmation: не подтвержден
+  support:
+      array:
+        two_words_connector: "; "

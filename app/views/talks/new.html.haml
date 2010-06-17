@@ -1,0 +1,9 @@
+%h1=t '.talk_new'
+
+- semantic_form_for @talk, :url => talks_path do |f|
+  = f.semantic_errors
+  - f.inputs do
+    = f.input :title, :label => t('.title')
+    = f.input :body, :label => t('.body')
+  - f.buttons do
+    = f.commit_button :button_html => { :value => t('.start') }
