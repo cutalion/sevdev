@@ -1,8 +1,9 @@
 class TalksController < ApplicationController
-  before_filter :require_user, :only => [:new, :create]
+  before_filter :require_user, :only => [:create]
+  layout 'application', :except => :new
   
   def index
-     @talks = Talk.find :all, :order => 'updated_at DESC'
+     @talks = Talk.find :all, :order => 'updated_at DESC', :include => :comments
   end
   
   def show
@@ -15,12 +16,10 @@ class TalksController < ApplicationController
   
   def create
     @talk = Talk.new(params[:talk])
+    @talk.title = 'empty'
     @talk.user = current_user
-    if @talk.save
-      flash[:notice] = t ".talk_started"
-      redirect_to talks_url
-    else
-      render :action => :new
-    end
+    @talk.save
+    #flash[:notice] = t ".talk_started"
+    redirect_to talks_url
   end
 end

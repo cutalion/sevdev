@@ -1,10 +1,21 @@
-%h1 
+%h1
   =t '.talk_list'
-  =link_to image_tag("add.png"), new_talk_path
+  =link_to image_tag("add.png", :id => 'new_post_img'), new_talk_path, :rel => 'facebox'
 
 - if (@talks) 
   - @talks.each do |talk|
-    .talk_block
-      .started_by 
-        %span=talk.created_at.to_formatted_s(:event) + ' / ' + talk.user.login
-      .linked_name=link_to talk.title, talk_path(talk)
+    .talks_block
+      %span.started_by= talk.user.login
+      //%span=talk.created_at.to_formatted_s(:event) + ' / ' + talk.user.login
+      //.linked_name=link_to talk.title, talk_path(talk)
+      %span.message= talk.body
+      
+      .comments_block
+        - unless (talk.nil?)
+          - talk.comments.each do |comment|
+            .comment
+              %span.started_by= comment.user.login
+              %span= comment.message
+      
+      .add_comment_block
+        =link_to 'ответить', new_talk_comment_path(talk), :rel => 'facebox'

@@ -3,6 +3,6 @@
 - semantic_form_for @comment, :url => talk_comments_path do |f|
   = f.semantic_errors
   - f.inputs do
-    = f.input :message, :label => t('.message')
+    = f.input :message, :label => t('.message'), :input_html => {:rows => 3, :cols => 20, :style=> "width: 100%"}
   - f.buttons do
     = f.commit_button :button_html => { :value => t('.add') }

@@ -1,30 +1,32 @@
-.talk_block
-  width: 400px
-  margin: 0px 10px 15px 0px
-  padding-left: 10px
-  padding-bottom: 5px
-  font-size: 14px
+.talks_block
+  //width: 400px
+  margin: 0px 0px 15px 0px
+  font-family: Verdana
+  font-size: 0.9em
   line-height: 20px
   background-color: white
   +transparency(0.6)
-  +border_radius(6px, 6px, 6px, 6px)
-  a
-    color: #1985b5
-    text-decoration: none
-  .linked_name
-    margin-top: 6px
-    margin-bottom: 5px
-    a
-      border-bottom: 1px dotted
+  //+border_radius(6px, 6px, 6px, 6px)
+  padding: 4px 4px 4px 5px
   .started_by
-    span
-      background-color: black
-      color: white
-      font-family: Georgia
-      padding: 2px 4px 4px 4px
-      +border_radius(0, 0, 6px, 6px)
-    margin-bottom: 5px
-  .title
+    background-color: gray
+    color: white
+    text-transform: uppercase
+    padding: 0 2px 0 2px
+    //font-weight: bold
+  .message
     font-weight: bold
+  .comments_block 
+    padding: 0 0 0 0
+    margin: 0 0 0 25px
+  .add_comment_block
+    margin-left: 25px
+    a
+      color: #1985b5
+    input
+      border: 1px solid gray
+      +border_radius(4px, 4px, 4px, 4px)
+      padding: 2px 4px 2px 4px
+#facebox 
   .body
-    margin-top: 5px
+    +transparency(0.9)

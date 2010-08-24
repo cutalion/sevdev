@@ -7,6 +7,7 @@ new TWTR.Widget({
     subject: '#idowebdev',
     width: 400,
     height: 400,
+    footer: 'присоединиться',
     theme: {
         shell: {
             background: '#8ec1da',

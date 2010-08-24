@@ -1,22 +1,22 @@
 /*
 Sass::SyntaxError: Undefined mixin 'transparency'.
-on line 9 of /Users/xHuNtEr/Desktop/sevdev/public/stylesheets/sass/talks.sass
+on line 8 of /Users/xHuNtEr/Desktop/sevdev/public/stylesheets/sass/talks.sass
 
-5:   padding-bottom: 5px
-6:   font-size: 14px
-7:   line-height: 20px
-8:   background-color: white
-9:   +transparency(0.6)
-10:   +border_radius(6px, 6px, 6px, 6px)
-11:   a
-12:     color: #1985b5
-13:     text-decoration: none
-14:   .linked_name
-15:     margin-top: 6px
+4:   font-family: Verdana
+5:   font-size: 0.9em
+6:   line-height: 20px
+7:   background-color: white
+8:   +transparency(0.6)
+9:   //+border_radius(6px, 6px, 6px, 6px)
+10:   padding: 4px 4px 4px 5px
+11:   .started_by
+12:     background-color: gray
+13:     color: white
+14:     text-transform: uppercase
 
 
 Backtrace:
-/Users/xHuNtEr/Desktop/sevdev/public/stylesheets/sass/talks.sass:9
+/Users/xHuNtEr/Desktop/sevdev/public/stylesheets/sass/talks.sass:8
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.24/rails/../lib/sass/tree/mixin_node.rb:27:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.24/rails/../lib/sass/tree/node.rb:158:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.24/rails/../lib/sass/tree/node.rb:202:in `perform_children'
@@ -86,9 +86,9 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
 /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
 /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-./script/server:3
+./server:3
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined mixin 'transparency'.\A on line 9 of /Users/xHuNtEr/Desktop/sevdev/public/stylesheets/sass/talks.sass\A \A 5:   padding-bottom: 5px\A 6:   font-size: 14px\A 7:   line-height: 20px\A 8:   background-color: white\A 9:   +transparency(0.6)\A 10:   +border_radius(6px, 6px, 6px, 6px)\A 11:   a\A 12:     color: #1985b5\A 13:     text-decoration: none\A 14:   .linked_name\A 15:     margin-top: 6px\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'transparency'.\A on line 8 of /Users/xHuNtEr/Desktop/sevdev/public/stylesheets/sass/talks.sass\A \A 4:   font-family: Verdana\A 5:   font-size: 0.9em\A 6:   line-height: 20px\A 7:   background-color: white\A 8:   +transparency(0.6)\A 9:   //+border_radius(6px, 6px, 6px, 6px)\A 10:   padding: 4px 4px 4px 5px\A 11:   .started_by\A 12:     background-color: gray\A 13:     color: white\A 14:     text-transform: uppercase\A "; }

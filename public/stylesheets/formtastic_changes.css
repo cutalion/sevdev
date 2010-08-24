@@ -16,6 +16,6 @@ form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 form.formtastic fieldset { display: block; }
 form.formtastic fieldset > ol > li { display: block; }
 form.formtastic fieldset > ol > li label { width: 185px; }
-form.formtastic fieldset.buttons { padding-left: 185px; }
+form.formtastic fieldset.buttons { padding-left: 0; }
 form.formtastic fieldset > ol > li p.inline-errors { margin-left: 185px; }
 form.formtastic fieldset > ol > li.boolean label { padding-left: 185px; }

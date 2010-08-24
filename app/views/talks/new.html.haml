@@ -3,7 +3,7 @@
 - semantic_form_for @talk, :url => talks_path do |f|
   = f.semantic_errors
   - f.inputs do
-    = f.input :title, :label => t('.title')
-    = f.input :body, :label => t('.body')
+    //= f.input :title, :label => t('.title')
+    = f.input :body, :label => t('.body'), :input_html => {:rows => 3, :cols => 20, :style => "width: 100%"}
   - f.buttons do
     = f.commit_button :button_html => { :value => t('.start') }

@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
-  before_filter :require_user, :only => [:new, :create]
+  before_filter :require_user, :only => [:create]
   before_filter :get_talk
+  layout 'application', :except => :new
     
   def new
      @comment = Comment.new
@@ -9,12 +10,9 @@ class CommentsController < ApplicationController
   def create
     @comment = @talk.comments.new(params[:comment])
     @comment.user = current_user
-    if @comment.save
-      flash[:notice] = t ".comment_added"
-      redirect_to talk_url(@talk)
-    else
-      render :action => :new
-    end
+    #flash[:notice] = t ".comment_added" if @comment.save
+    @comment.save
+    redirect_to talks_url
   end
   
   private

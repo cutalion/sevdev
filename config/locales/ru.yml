@@ -11,7 +11,7 @@ ru:
       register:   Регистрация
   events:
     index:
-      event_list: Давайте соберемся!
+      event_list: "События: Давайте соберемся!"
       no_events:  К сожалению, в ближайшее время событий не предвидится.
   users:
     new:
@@ -29,7 +29,7 @@ ru:
       remember_me: запомнить
   talks:
     index:
-      talk_list: Есть что обсудить?
+      talk_list: "Разговоры: Есть что обсудить?"
     new:
       talk_new:  Начнем новый разговор
       title:     Тема
@@ -45,6 +45,8 @@ ru:
   
   talk_started: Удалось начать новый разговор!
   comment_added: Комментарий оставлен.
+  require_user:  Вам следует войти в систему.
+  require_no_user: Необходимо выйти из системы.
   
   activerecord:
      errors:
