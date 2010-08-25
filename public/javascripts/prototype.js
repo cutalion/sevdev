@@ -120,7 +120,7 @@ Object.extend(Object, {
       throw e;
     }
   },
-
+/*
   toJSON: function(object) {
     var type = typeof object;
     switch (type) {
@@ -143,7 +143,7 @@ Object.extend(Object, {
 
     return '{' + results.join(', ') + '}';
   },
-
+*/
   toQueryString: function(object) {
     return $H(object).toQueryString();
   },
@@ -910,7 +910,7 @@ Object.extend(Array.prototype, {
   inspect: function() {
     return '[' + this.map(Object.inspect).join(', ') + ']';
   },
-
+/*
   toJSON: function() {
     var results = [];
     this.each(function(object) {
@@ -919,6 +919,7 @@ Object.extend(Array.prototype, {
     });
     return '[' + results.join(', ') + ']';
   }
+  */
 });
 
 // use native browser JS 1.6 implementation if available
