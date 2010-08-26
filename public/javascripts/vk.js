@@ -12,7 +12,7 @@ function doLogin() {
 VK.Observer.subscribe('auth.login', function(response) {
 	if (response.session) {
 		 VK.Api.call('getVariable', {key: 1281}, function(username) {
-		     console.log(username);
+		     document.location.reload(true);
 		 });
 	}
 });

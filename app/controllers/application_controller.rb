@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
       unless current_user
         store_location
         flash[:notice] = t ".require_user"
-        redirect_to new_user_session_url
+        #redirect_to new_user_session_url
         return false
       end
     end
@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
       if current_user
         store_location
         flash[:notice] = t ".require_no_user"
-        redirect_to account_url
+        #redirect_to account_url
         return false
       end
     end
