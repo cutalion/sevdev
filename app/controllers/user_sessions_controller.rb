@@ -7,12 +7,13 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-    @user_session = UserSession.new(params[:user_session])
-    if @user_session.save
-      redirect_back_or_default account_url
-    else
-      render :action => :new
-    end
+    @user_session = UserSession.new(:vk_username => params[:login])
+    render :text => (@user_session.save) ? 'awesome' : 'shit';
+    #if @user_session.save
+    #  redirect_back_or_default account_url
+    #else
+    #  render :action => :new
+    #end
   end
 
   def destroy

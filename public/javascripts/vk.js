@@ -6,13 +6,22 @@ VK.init({
 VK.UI.button('vk_login');
 
 function doLogin() {
-  VK.Auth.login(null);
+  VK.Auth.login(function(response) {
+     if (response.session) {
+  		 VK.Api.call('getVariable', {key: 1281}, function(hash) {
+             new Ajax.Request('/user_session', {
+                 method: 'post',
+                 parameters: {login: hash.response},
+                 onSuccess: function(transport){
+                     document.location.reload(true);
+                 }
+             });
+             
+  		 });
+     }
+  });
 };
 
 VK.Observer.subscribe('auth.login', function(response) {
-	if (response.session) {
-		 VK.Api.call('getVariable', {key: 1281}, function(username) {
-		     document.location.reload(true);
-		 });
-	}
+
 });

@@ -14,18 +14,28 @@ module VKLogic
     module InstanceMethods
       def self.included(klass)
         klass.class_eval do
-          # WTF? should be validate callback, but works while using persist
-          persist :validate_by_vkontakte, :if => :authenticating_with_vkontakte?
+          validate :validate_by_vkontakte, :if => :authenticating_with_vkontakte?
         end
+      end
+            
+      def credentials=(value)
+        super
+        values = value.is_a?(Array) ? value : [value]
+        hash = values.first.is_a?(Hash) ? values.first.with_indifferent_access : nil
+        self.vk_username = hash[:vk_username] if !hash.nil? && hash.key?(:vk_username)
+      end
+      
+      def vk_username=(value)
+        @vk_username = value
       end
       
       def validate_by_vkontakte
         vk_cookies = CGI::parse(controller.cookies[:vk_app_1930589])
         self.attempted_record = klass.send(:first, :conditions => { :vk_id => vk_cookies['mid'].first })
-        
+
         unless self.attempted_record
           new_user = klass.new
-          new_user.login = 'vkontakte_user'
+          new_user.login = (@vk_username.nil?) ? 'vkontakte_user' : @vk_username
           new_user.vk_id = vk_cookies['mid'].first
           self.attempted_record = new_user
           self.attempted_record.save
