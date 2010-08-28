@@ -31,6 +31,7 @@ module VKLogic
       
       def validate_by_vkontakte
         vk_cookies = CGI::parse(controller.cookies[:vk_app_1930589])
+        # TODO: verify session signature, check expiration time 
         self.attempted_record = klass.send(:first, :conditions => { :vk_id => vk_cookies['mid'].first })
 
         unless self.attempted_record
