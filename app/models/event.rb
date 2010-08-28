@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  validates_presence_of :started_at, :name, :description
+  #validates_presence_of :started_at, :name, :description
   belongs_to :place
 
   def to_ical
