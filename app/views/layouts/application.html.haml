@@ -10,7 +10,7 @@
       .logo=link_to 'I do webdev ;)', root_path
       .menu
         - if current_user
-          #logged_in_as= current_user.login
+          #logged_in_as&= current_user.login
         - else
           #vk_login{:onclick => "doLogin();"}
     %ul#main_menu.menu

@@ -5,17 +5,17 @@
 - if (@talks) 
   - @talks.each do |talk|
     .talks_block
-      %span.started_by= (!talk.user.nil?) ? talk.user.login : 'unknown'
+      %span.started_by&= (!talk.user.nil?) ? talk.user.login : 'unknown'
       //%span=talk.created_at.to_formatted_s(:event) + ' / ' + talk.user.login
       //.linked_name=link_to talk.title, talk_path(talk)
-      %span.message= talk.body
+      %span.message&= talk.body
       
       .comments_block
         - unless (talk.nil?)
           - talk.comments.each do |comment|
             .comment
-              %span.started_by= (!comment.user.nil?) ? comment.user.login : 'unknown'
-              %span= comment.message
+              %span.started_by&= (!comment.user.nil?) ? comment.user.login : 'unknown'
+              %span&= comment.message
       
       .add_comment_block
         =link_to 'ответить', new_talk_comment_path(talk), :rel => 'facebox'
