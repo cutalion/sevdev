@@ -1,3 +1,5 @@
+@import structure.sass
+
 .event_block
   width: 400px
   margin: 0px 10px 15px 0px
@@ -7,8 +9,8 @@
   font-size: 14px
   line-height: 20px
   background-color: white
-  +transparency(0.6)
-  +border_radius(6px, 6px, 6px, 6px)
+  @include transparency(0.6)
+  @include border_radius(6px, 6px, 6px, 6px)
   a
     color: #1985b5
     text-decoration: none
@@ -38,5 +40,5 @@
       color: white
       font-family: Georgia
       padding: 2px 4px 4px 4px
-      +border_radius(0, 0, 6px, 6px)
+      @include border_radius(0, 0, 6px, 6px)
     margin-bottom: 5px

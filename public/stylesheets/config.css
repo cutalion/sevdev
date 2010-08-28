@@ -1,0 +1,13 @@
+@mixin transparency($opacity) {
+  filter: alpha(opacity=$opacity*10);
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity; }
+
+@mixin border_radius($top_left, $top_right, $bottom_left, $bottom_right) {
+  border-radius: $top_left $top_right $bottom_left $bottom_right;
+  -webkit-border-top-left-radius: $top_left;
+  -webkit-border-top-right-radius: $top_right;
+  -webkit-border-bottom-left-radius: $bottom_left;
+  -webkit-border-bottom-right-radius: $bottom_right;
+  -moz-border-radius: $top_left $top_right $bottom_left $bottom_right; }

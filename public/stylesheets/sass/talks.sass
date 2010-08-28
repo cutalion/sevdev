@@ -1,3 +1,5 @@
+@import structure.sass
+
 .talks_block
   //width: 400px
   margin: 0px 0px 15px 0px
@@ -5,7 +7,7 @@
   font-size: 0.9em
   line-height: 20px
   background-color: white
-  +transparency(0.6)
+  @include transparency(0.6)
   //+border_radius(6px, 6px, 6px, 6px)
   padding: 4px 4px 4px 5px
   .started_by
@@ -25,8 +27,8 @@
       color: #1985b5
     input
       border: 1px solid gray
-      +border_radius(4px, 4px, 4px, 4px)
+      @include border_radius(4px, 4px, 4px, 4px)
       padding: 2px 4px 2px 4px
 #facebox 
   .body
-    +transparency(0.9)
+    @include transparency(0.9)

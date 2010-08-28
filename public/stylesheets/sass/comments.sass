@@ -1,3 +1,5 @@
+@import structure.sass
+
 .comment_block
   width: 400px
   margin: 15px 10px 0px 0px
@@ -6,8 +8,8 @@
   font-size: 14px
   line-height: 20px
   background-color: white
-  +transparency(0.6)
-  +border_radius(6px, 6px, 6px, 6px)
+  @include transparency(0.6)
+  @include border_radius(6px, 6px, 6px, 6px)
   a
     color: #1985b5
     text-decoration: none
@@ -24,5 +26,5 @@
       color: white
       font-family: Georgia
       padding: 2px 4px 4px 4px
-      +border_radius(6px, 6px, 0, 0)
+      @include border_radius(6px, 6px, 0, 0)
     margin-bottom: 5px
