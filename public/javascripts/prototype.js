@@ -919,7 +919,7 @@ Object.extend(Array.prototype, {
     });
     return '[' + results.join(', ') + ']';
   }
-  */
+*/
 });
 
 // use native browser JS 1.6 implementation if available
