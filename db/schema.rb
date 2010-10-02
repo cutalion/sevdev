@@ -47,13 +47,13 @@ ActiveRecord::Schema.define(:version => 20100828114135) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",                            :default => ""
-    t.string   "email",                            :default => ""
-    t.string   "crypted_password",                 :default => ""
-    t.string   "password_salt",                    :default => ""
-    t.string   "persistence_token",                :default => ""
-    t.string   "single_access_token",              :default => ""
-    t.string   "perishable_token",                 :default => ""
+    t.string   "login"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.string   "single_access_token"
+    t.string   "perishable_token"
     t.integer  "login_count",                      :default => 0
     t.integer  "failed_login_count",               :default => 0
     t.datetime "last_request_at"

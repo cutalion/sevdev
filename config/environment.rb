@@ -23,7 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "icalendar"
   config.gem "authlogic"
   config.gem "formtastic"
-  config.gem "bitly"
+#  config.gem "bitly"
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
